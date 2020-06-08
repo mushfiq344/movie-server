@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/movies', 'MovieController@index');
+Route::post('movieSubmit', 'MovieController@movieSubmit');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
