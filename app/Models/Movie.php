@@ -15,4 +15,11 @@ class Movie extends Model
     {
         return $this->hasMany('App\Models\Comment');
     }
+    /**
+     * Get the genres for the blog post.
+     */
+    public function genres()
+    {
+        return $this->hasMany('App\Models\Genre');
+    }
 }

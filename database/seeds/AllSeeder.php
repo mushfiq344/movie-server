@@ -2,7 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
-
+use App\Models\Movie as Movie;
+use App\Models\Genre as Genre;
+use App\Models\Comment as Comment;
 
 class AllSeeder extends Seeder
 {
@@ -13,44 +15,52 @@ class AllSeeder extends Seeder
      */
     public function run()
     {
-        // adding total 50 users in user table
-        // for ($x = 0; $x <= 49; $x++) {
+        //adding total 10 users in user table
+        // for ($x = 0; $x <= 9; $x++) {
         //     DB::table('users')->insert([
         //         'name' => Str::random(10),
         //         'email' => Str::random(10) . '@gmail.com',
         //         'Password' => bcrypt('12345678')
         //     ]);
         // }
-        // adding total 10 movies in movies table  
-        // for ($x = 0; $x <= 9; $x++) {
-        //     DB::table('movies')->insert([
-        //         'name' => Str::random(10),
-        //         'description' => Str::random(10),
-        //         'release' => date('Y-m-d'),
-        //         'date' => date('Y-m-d'),
-        //         "country" =>  Str::random(10),
-        //         "photo" => Str::random(10)
-        //     ]);
+        //adding total 10 movies in movies table
+        $faker = Faker::create();
+        // for ($x = 0; $x <= 2; $x++) {
+
+        //     $movie = new Movie;
+        //     $movie->name = Str::random(10);
+        //     $movie->slug_name = Str::random(10);
+        //     $movie->description = Str::random(10);
+        //     $movie->release = date('Y-m-d');
+        //     $movie->date = date('Y-m-d');
+        //     $movie->country = Str::random(10);
+        //     $movie->save();
+        //     // one genre for each movie
+        //     $genreName = $faker->randomElement(['Action', 'Horror', 'Animation']);
+        //     $genre = new Genre;
+        //     $genre->name = $genreName;
+        //     $genre->movie_id = $movie->id;
+        //     $genre->save();
         // }
 
         $usersIDs = DB::table('users')->pluck('id')->all();
         $moviesIDs = DB::table('movies')->pluck('id')->all();
 
-        $faker = Faker::create();
+
 
         // adding total 6 comments for each movie in comments table  
         foreach ($moviesIDs as $movieID) {
-            $userID = $faker->randomElement($usersIDs);
-            $user =
-                DB::table('users')->where('id', $userID)->pluck('name');
-
             for ($x = 0; $x <= 5; $x++) {
-                DB::table('comments')->insert([
-                    'name' => $user[0],
-                    'movie_id' => $movieID,
-                    'user_id' =>  $userID,
-                    'comment' => Str::random(10)
-                ]);
+                // getting random userID 
+                $userID = $faker->randomElement($usersIDs);
+                $user = DB::table('users')->where('id', $userID)->pluck('name');
+                // creating comment
+                $comment = new Comment;
+                $comment->name = $user[0];
+                $comment->movie_id = $movieID;
+                $comment->user_id = $userID;
+                $comment->comment = Str::random(10);
+                $comment->save();
             }
         }
     }

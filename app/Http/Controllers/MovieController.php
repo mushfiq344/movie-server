@@ -6,6 +6,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
 use App\Models\Movie;
 use App\Models\Comment;
+use App\Models\Genre;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -23,7 +24,7 @@ class MovieController extends Controller
     function index()
     {
 
-        $movies = Movie::paginate(2);
+        $movies = Movie::paginate(3);
         return $movies;
     }
     /**
@@ -36,7 +37,9 @@ class MovieController extends Controller
     {
 
         $movie = Movie::where('slug_name', $slug_name)->first();
+
         if ($movie) {
+            $movie->genres = Genre::where("movie_id", $movie->id)->get();
             return $movie;
         } else {
             return "invalid";
@@ -54,14 +57,14 @@ class MovieController extends Controller
         $validator = Validator::make(
             $request->all(),
             array(
-                'name' => 'required',
                 'slug_name' => 'required|unique:movies'
             )
         );
 
         // for failed validation
         if ($validator->fails()) {
-            return response()->json([$validator->messages()]);
+            $errorString = implode(",", $validator->messages()->all());
+            return response()->json($errorString);
         }
 
         $movie = new Movie;
@@ -93,9 +96,19 @@ class MovieController extends Controller
 
         $movie->save();
         $genres = [];
-        $genres = $request->genres;
+        // saving movie genres
+        $genres = explode(',', $request->genres);
 
-        return response()->json($genres);
+        foreach ($genres as $genre) {
+            if ($genre != "") {
+                $newGenre = new Genre;
+                $newGenre->name = $genre;
+                $newGenre->movie_id = $movie->id;
+                $newGenre->save();
+            }
+        }
+
+        return response()->json("Upload Successful!");
     }
 
     /**
@@ -136,7 +149,7 @@ class MovieController extends Controller
         return response()->json($comment);
     }
     /**
-     *return id using slugname
+     *return id of a movie using slugname
      *
      * @param slug_name
      * @return int

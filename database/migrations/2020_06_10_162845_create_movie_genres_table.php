@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Genres extends Migration
+class CreateMovieGenresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Genres extends Migration
      */
     public function up()
     {
-        Schema::create('genres', function (Blueprint $table) {
+        Schema::create('movie_genres', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->foreignId('movie_id')->references('id')->on('movies');
@@ -27,6 +27,6 @@ class Genres extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('movie_genres');
     }
 }
