@@ -14,8 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/movies', 'MovieController@index');
+
 Route::post('movieSubmit', 'MovieController@movieSubmit');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::post('register', 'UserController@register');
+Route::post('login', 'UserController@authenticate');
+Route::get('open', 'DataController@open');
+
+Route::group(['middleware' => ['jwt.verify']], function () {
+    Route::get('/movies', 'MovieController@index');
+    Route::get('/movie/{slug_name}', 'MovieController@movie');
+    Route::get('user', 'UserController@getAuthenticatedUser');
+    Route::get('closed', 'DataController@closed');
+    Route::get('/comments/{slug_name}', 'MovieController@comments');
+    Route::post('/insertComment', 'MovieController@insertComment');
 });

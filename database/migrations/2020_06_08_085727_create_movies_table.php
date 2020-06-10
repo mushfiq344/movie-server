@@ -15,18 +15,19 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->text('name',1000);
-            $table->text('description',1000);
+            $table->text('name', 1000);
+            $table->text('slug_name', 1000)->unique();
+            $table->text('description', 1000)->default("N/A");
 
             $table->date('release');
             $table->date('date');
-           
+
             $table->integer('rating')->unsigned()->default(1);
-             $table->integer('ticket')->unsigned()->default(0);
+            $table->integer('ticket')->unsigned()->default(0);
             $table->integer('price')->unsigned()->default(0);
 
-            $table->text('country', 1000);
-             $table->text('photo', 1000);
+            $table->text('country', 1000)->default("N/A");;
+            $table->text('photo', 1000)->default('http://localhost:8000/default_poster.jpg');
             $table->timestamps();
         });
     }
