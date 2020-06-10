@@ -78,6 +78,10 @@ class MovieController extends Controller
 
         $movie->rating = $request->rating;
 
+        $movie->country = $request->country;
+        $movie->price = $request->price;
+        $movie->ticket = $request->ticket;
+
 
 
         if ($request->hasfile('myimages')) {
