@@ -16,32 +16,32 @@ class AllSeeder extends Seeder
     public function run()
     {
         //adding total 10 users in user table
-        // for ($x = 0; $x <= 9; $x++) {
-        //     DB::table('users')->insert([
-        //         'name' => Str::random(10),
-        //         'email' => Str::random(10) . '@gmail.com',
-        //         'Password' => bcrypt('12345678')
-        //     ]);
-        // }
+        for ($x = 0; $x <= 9; $x++) {
+            DB::table('users')->insert([
+                'name' => Str::random(10),
+                'email' => Str::random(10) . '@gmail.com',
+                'Password' => bcrypt('12345678')
+            ]);
+        }
         //adding total 10 movies in movies table
         $faker = Faker::create();
-        // for ($x = 0; $x <= 2; $x++) {
+        for ($x = 0; $x <= 2; $x++) {
 
-        //     $movie = new Movie;
-        //     $movie->name = Str::random(10);
-        //     $movie->slug_name = Str::random(10);
-        //     $movie->description = Str::random(10);
-        //     $movie->release = date('Y-m-d');
-        //     $movie->date = date('Y-m-d');
-        //     $movie->country = Str::random(10);
-        //     $movie->save();
-        //     // one genre for each movie
-        //     $genreName = $faker->randomElement(['Action', 'Horror', 'Animation']);
-        //     $genre = new Genre;
-        //     $genre->name = $genreName;
-        //     $genre->movie_id = $movie->id;
-        //     $genre->save();
-        // }
+            $movie = new Movie;
+            $movie->name = Str::random(10);
+            $movie->slug_name = Str::random(10);
+            $movie->description = Str::random(10);
+            $movie->release = date('Y-m-d');
+            $movie->date = date('Y-m-d');
+            $movie->country = Str::random(10);
+            $movie->save();
+            // one genre for each movie
+            $genreName = $faker->randomElement(['Action', 'Horror', 'Animation']);
+            $genre = new Genre;
+            $genre->name = $genreName;
+            $genre->movie_id = $movie->id;
+            $genre->save();
+        }
 
         $usersIDs = DB::table('users')->pluck('id')->all();
         $moviesIDs = DB::table('movies')->pluck('id')->all();
