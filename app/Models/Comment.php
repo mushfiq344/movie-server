@@ -13,6 +13,13 @@ class Comment extends Model
      */
     public function movie()
     {
-        return $this->belongsTo('App\Models\Movie');
+        return $this->belongsTo('App\Models\Movie', 'movie_id', 'id');
+    }
+    /**
+     * Get the post that owns the comment.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id', 'id');
     }
 }

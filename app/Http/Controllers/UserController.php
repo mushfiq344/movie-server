@@ -56,17 +56,17 @@ class UserController extends Controller
         try {
 
             if (!$user = JWTAuth::parseToken()->authenticate()) {
-                return response()->json(['user_not_found'], 404);
+                return response()->json(['status' => 'user_not_found', 'token' => false], 404);
             }
         } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
 
-            return response()->json(['token_expired'], $e->getStatusCode());
+            return response()->json(['status' => 'token_expired', 'token' => false], $e->getStatusCode());
         } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
 
-            return response()->json(['token_invalid'], $e->getStatusCode());
+            return response()->json(['status' => 'token_invalid', 'token' => false], $e->getStatusCode());
         } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
 
-            return response()->json(['token_absent'], $e->getStatusCode());
+            return response()->json(['status' => 'token_absent', 'token' => false], $e->getStatusCode());
         }
 
         return response()->json(compact('user'));

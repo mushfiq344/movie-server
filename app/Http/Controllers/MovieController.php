@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 use App\Models\Movie;
 use App\Models\Comment;
 use App\Models\Genre;
+use App\Models\Movie_Genre;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Auth;
 
 class MovieController extends Controller
 {
@@ -36,14 +38,25 @@ class MovieController extends Controller
     function movie($slug_name)
     {
 
-        $movie = Movie::where('slug_name', $slug_name)->first();
+        $movie = Movie::where('slug_name', $slug_name)->with('genres')->first();
 
         if ($movie) {
-            $movie->genres = Genre::where("movie_id", $movie->id)->get();
             return $movie;
         } else {
             return "invalid";
         }
+    }
+    /**
+     * return movie with given slug_name
+     *
+     * @param 
+     * @return array
+     */
+    function genres()
+    {
+        $genres = Genre::all();
+
+        return response()->json(['status' => 'Token is valid', 'token' => true, 'data' => $genres]);
     }
     /**
      * Upload Movie
@@ -105,8 +118,8 @@ class MovieController extends Controller
 
         foreach ($genres as $genre) {
             if ($genre != "") {
-                $newGenre = new Genre;
-                $newGenre->name = $genre;
+                $newGenre = new Movie_Genre;
+                $newGenre->genre_id = $genre;
                 $newGenre->movie_id = $movie->id;
                 $newGenre->save();
             }
@@ -128,7 +141,8 @@ class MovieController extends Controller
             return "invalid";
         }
         $comments = Comment::where('movie_id', $movieID)->get();
-        return $comments;
+        $currentUser = Auth::user();
+        return response()->json(['status' => 'Token is valid', 'token' => true, 'data' => $comments, 'user' => $currentUser]);
     }
     /**
      *insert a comment in db
