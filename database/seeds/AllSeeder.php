@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use App\Models\Movie as Movie;
 use App\Models\Genre as Genre;
 use App\Models\Comment as Comment;
+use App\Models\Movie_Genre as Movie_Genre;
 
 class AllSeeder extends Seeder
 {
@@ -36,9 +38,10 @@ class AllSeeder extends Seeder
             $movie->country = Str::random(10);
             $movie->save();
             // one genre for each movie
-            $genreName = $faker->randomElement(['Action', 'Horror', 'Animation']);
-            $genre = new Genre;
-            $genre->name = $genreName;
+            $ids = Genre::pluck('id');
+            $genreId = $faker->randomElement($ids);
+            $genre = new Movie_Genre;
+            $genre->genre_id = $genreId;
             $genre->movie_id = $movie->id;
             $genre->save();
         }

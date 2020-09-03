@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2020 at 11:14 PM
+-- Generation Time: Sep 04, 2020 at 01:04 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -42,77 +42,119 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `name`, `comment`, `movie_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'flfBu4jOUX', 'Lnc1I8b02p', 1, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(2, 'bIV5joKyDE', 'lfqhNY65Ik', 1, 5, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(3, 'BKB6P9HeRo', 'FUwJ6Frsar', 1, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(4, 'xC16wmPRJd', 'PvcxEd1Y6m', 1, 7, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(5, 'UYgCNPjVTT', 'VZnPkDKD2M', 1, 3, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(6, 'BKB6P9HeRo', 'Da3jE1ohKj', 1, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(7, 'flfBu4jOUX', 'LqTCfhl6Ts', 2, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(8, 'ovG9UrTEED', 'QqyfBRhjlw', 2, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(9, 'GZ9Sy6iobr', 't9fIspAT0T', 2, 9, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(10, 'UYgCNPjVTT', 'La3quFtxYa', 2, 3, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(11, 'bIV5joKyDE', 'UiHaCmnpIZ', 2, 5, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(12, 'BKB6P9HeRo', 'FjIQeHfqzt', 2, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(13, 'ovG9UrTEED', 'DVzzwPySKv', 3, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(14, 'xC16wmPRJd', 'qtiAazEWR6', 3, 7, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(15, 'ovG9UrTEED', 'tN9JdiqWo0', 3, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(16, 'flfBu4jOUX', 'uvvMlfDqsL', 3, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(17, 'ovG9UrTEED', 'oyG2gvW0mu', 3, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(18, 'RQeLueNfje', 'ibcZmBKCY4', 3, 2, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(19, 'ovG9UrTEED', 'VqzrhjfUAq', 4, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(20, 'GZ9Sy6iobr', 'acyjfoSXRV', 4, 9, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(21, 'flfBu4jOUX', 'KcmoT0Txd9', 4, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(22, '5HGxvxPFk0', '5rPIjZ4iSh', 4, 1, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(23, 'UYgCNPjVTT', 'Uh02yI5sOr', 4, 3, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(24, 'ovG9UrTEED', 'xn0Iw1hJDg', 4, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(25, 'RQeLueNfje', 'wS1FfwkYnk', 5, 2, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(26, 'BKB6P9HeRo', '90IUbBugZ3', 5, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(27, 'BKB6P9HeRo', 'mrXiot8jgm', 5, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(28, 'GZ9Sy6iobr', '05uzcmUZjo', 5, 9, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(29, 'xC16wmPRJd', 'Pz8rktO7wH', 5, 7, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(30, 'UYgCNPjVTT', 'peHE9AKnU8', 5, 3, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(31, '5HGxvxPFk0', 'xfROQcnF1H', 6, 1, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(32, 'bIV5joKyDE', 'mI8WZXPoL8', 6, 5, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(33, 'flfBu4jOUX', 'TvxB2zerHv', 6, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(34, 'ovG9UrTEED', 'R4C2jKFGs3', 6, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(35, 'ovG9UrTEED', 'BvqrG2Zj8Q', 6, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(36, 'flfBu4jOUX', 'Iug8LO3hYZ', 6, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(37, 'RQeLueNfje', '6lOVOtfLBu', 7, 2, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(38, 'xC16wmPRJd', 'RinVXVxIbp', 7, 7, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(39, 'BKB6P9HeRo', 'tRYXIGzy8L', 7, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(40, 'BKB6P9HeRo', 'Pl32HIiEnL', 7, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(41, 'ovG9UrTEED', 'LTBBlI0GUy', 7, 8, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(42, 'xC16wmPRJd', 'XmWJkvIjgf', 7, 7, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(43, 'BKB6P9HeRo', 'XXjKzd53R6', 8, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(44, 'RQeLueNfje', 'wGcw7SbcHF', 8, 2, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(45, 'RQeLueNfje', '9h49xOrZFo', 8, 2, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(46, 'BKB6P9HeRo', 'eVtyDiM5jB', 8, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(47, 'flfBu4jOUX', 'PDrqP5nLfr', 8, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(48, 'bIV5joKyDE', '1xvYYPhkAG', 8, 5, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(49, 'UYgCNPjVTT', 'KOq8VbfE66', 9, 3, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(50, 'BKB6P9HeRo', 'NDK4zoOpYL', 9, 10, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(51, '5HGxvxPFk0', 'p1ucrZdhZQ', 9, 1, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(52, 'flfBu4jOUX', 'eLvMwdJKTC', 9, 4, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(53, '5HGxvxPFk0', 'dFImbduU2d', 9, 1, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(54, 'UYgCNPjVTT', 'iCWkXnJaux', 9, 3, '2020-06-10 14:43:36', '2020-06-10 14:43:36'),
-(55, 'Mushfiqur Rahman', 'nice !', 2, 1, '2020-06-10 14:46:18', '2020-06-10 14:46:18'),
-(56, 'Mushfiqur Rahman', 'Wonderful movie !', 2, 1, '2020-06-10 14:59:46', '2020-06-10 14:59:46');
+(125, 'Mushfiqur Rahman', 'nice', 47, 1, '2020-09-01 07:48:16', '2020-09-01 07:48:16'),
+(126, 'omDrT9jSdj', 'LHbjZKkSrd', 45, 23, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(127, 'mimo', 'qhpm6kEMFE', 45, 17, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(128, 'xWhIERnkf4', 'SWgLoxWLpQ', 45, 28, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(129, 'bIV5joKyDE', 'zMZrNoq5L1', 45, 5, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(130, 'GZ9Sy6iobr', 'rBkvkTI5CR', 45, 9, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(131, 'flfBu4jOUX', 'YxumDjeV29', 45, 4, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(132, 'omDrT9jSdj', 'f1nqxmDqOG', 46, 23, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(133, 'mimo', 'AabfG2IpC3', 46, 17, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(134, 'RQeLueNfje', '4p3kda4dOm', 46, 2, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(135, 'BKB6P9HeRo', 'HMX7eiSmrj', 46, 10, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(136, 'omDrT9jSdj', 'AMzGdwozgj', 46, 23, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(137, 'omDrT9jSdj', 'yfmAfbaREQ', 46, 23, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(138, 'RQeLueNfje', 'gSwUge1X6s', 47, 2, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(139, 'xC16wmPRJd', 'BTIrrZ3e0d', 47, 7, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(140, 'RQeLueNfje', 'BloY2z2EcZ', 47, 2, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(141, 'bIV5joKyDE', 'dHACPZNtwO', 47, 5, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(142, 'omDrT9jSdj', 'Wu7PxqIT6b', 47, 23, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(143, 'd7JMijWvnZ', 'De3ExzGZfF', 47, 19, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(144, 'yFwLDPgH5p', 'lIq5qT5m2H', 48, 25, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(145, 'd7JMijWvnZ', 'TvWKq6Zh6w', 48, 19, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(146, 'omDrT9jSdj', '1exwRJK8TB', 48, 23, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(147, 'RUtPn0i8YB', '2sCNQl3yzW', 48, 22, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(148, 'd7JMijWvnZ', 'zmjcGYzcUC', 48, 19, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(149, 'RQeLueNfje', '0JUJJfhSam', 48, 2, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(150, 'cEyozDLQG7', 'tiGncDtE8r', 49, 21, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(151, 'McQZ6eUxdy', 'B2ISYv2xt1', 49, 20, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(152, 'mimo', 'ne8Awqi5fJ', 49, 17, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(153, 'hSuJB6XkZr', 'dZayeRoqar', 49, 24, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(154, 'hSuJB6XkZr', 'nQblbtGulU', 49, 24, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(155, 'xWhIERnkf4', 'M8lAQaNA1O', 49, 28, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(156, 'Mushfiqur Rahman', 'V2onOmCuGa', 50, 1, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(157, 'sakib', 'fPecRRgddt', 50, 18, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(158, 'xWhIERnkf4', 'xThdQghdoI', 50, 28, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(159, 'sakib', 'Zs8BMygBBu', 50, 18, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(160, 'd7JMijWvnZ', 'wcUru9mCvz', 50, 19, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(161, '0feYkzsJpG', 'veT67uCnKg', 50, 6, '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(162, 'Mushfiqur Rahman', 'nice', 50, 1, '2020-09-03 17:03:22', '2020-09-03 17:03:22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Table structure for table `genres`
 --
 
-CREATE TABLE `failed_jobs` (
+CREATE TABLE `genres` (
+  `id` int(11) NOT NULL,
+  `name` varchar(2000) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `genres`
+--
+
+INSERT INTO `genres` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Animation', '2020-09-01 10:30:06', '2020-09-01 10:30:06'),
+(2, 'Action', '2020-09-01 10:30:06', '2020-09-01 10:30:06'),
+(3, 'Horror', '2020-09-01 10:30:06', '2020-09-01 10:30:06'),
+(4, 'Comedy', '2020-09-01 11:17:48', '2020-09-01 11:17:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `genre_movie`
+--
+
+CREATE TABLE `genre_movie` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `genre_id` int(10) UNSIGNED NOT NULL,
+  `movie_id` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `genre_movie`
+--
+
+INSERT INTO `genre_movie` (`id`, `genre_id`, `movie_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 45, NULL, NULL),
+(2, 3, 45, NULL, NULL),
+(3, 4, 45, NULL, NULL),
+(4, 1, 46, NULL, NULL),
+(5, 3, 46, NULL, NULL),
+(6, 2, 46, NULL, NULL),
+(8, 2, 47, NULL, NULL),
+(9, 3, 48, NULL, NULL),
+(10, 2, 49, NULL, NULL),
+(11, 3, 50, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `imageable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `imageable_id` bigint(20) UNSIGNED NOT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `imageable_type`, `imageable_id`, `url`, `created_at`, `updated_at`) VALUES
+(1, 'App\\User', 1, 'user_image', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -163,7 +205,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (30, '2020_06_08_085728_create_movies_table', 18),
 (31, '2020_06_08_092916_create_comments_table', 18),
 (32, '2020_06_10_162845_create_movie_genres_table', 18),
-(33, '2020_06_08_092917_create_comments_table', 19);
+(33, '2020_06_08_092917_create_comments_table', 19),
+(34, '2020_06_10_215029_create_shipments_table', 20),
+(35, '2020_06_19_012212_create_images_table', 21),
+(36, '2020_06_19_012213_create_images_table', 22),
+(37, '2020_06_19_012214_create_images_table', 23),
+(38, '2020_09_01_132746_create_genre_movie_table', 24);
 
 -- --------------------------------------------------------
 
@@ -192,44 +239,12 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `name`, `slug_name`, `description`, `release`, `date`, `rating`, `ticket`, `price`, `country`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'YnKNp4H1eh', 'XMHcUEUUZX', '7jWqDxuVFu', '2020-06-10', '2020-06-10', 1, 0, 0, 'LJy0bMC98J', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:32:22', '2020-06-10 14:32:22'),
-(2, 'gIYWpWn0AS', 'gtd2gJkGKn', 'kctz9HZWlV', '2020-06-10', '2020-06-10', 1, 0, 0, 'kLuEMTxkCA', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:32:22', '2020-06-10 14:32:22'),
-(3, 'M0BAvvUPyF', 'fgly6jdm1f', 'o3QXQyWYD4', '2020-06-10', '2020-06-10', 1, 0, 0, 'HBipvyG3Pb', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:32:22', '2020-06-10 14:32:22'),
-(4, 'eq5PBjSZuM', 'aRaXGTaKXD', '9stGdFdRHQ', '2020-06-10', '2020-06-10', 1, 0, 0, '0V1wETRRKi', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:33:43', '2020-06-10 14:33:43'),
-(5, '3W36u5Q2Wg', 'OUv21JKAc0', '79A10gsFLA', '2020-06-10', '2020-06-10', 1, 0, 0, 'fIkatrwhrJ', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:33:43', '2020-06-10 14:33:43'),
-(6, 'wbJ7pt7s0m', '3so32zjJu9', 'ido9opBwxy', '2020-06-10', '2020-06-10', 1, 0, 0, 'czb1tatjOZ', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:33:43', '2020-06-10 14:33:43'),
-(7, 'OFOHlMHKzd', 'MDogUqBXkR', 'ITEhhmpZgN', '2020-06-10', '2020-06-10', 1, 0, 0, '2fdT8al6FN', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:33:45', '2020-06-10 14:33:45'),
-(8, 'anOXozC1EZ', 'lASGx3lqJF', 'EtDrz0hOiM', '2020-06-10', '2020-06-10', 1, 0, 0, 'Kqv5n484H0', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:33:45', '2020-06-10 14:33:45'),
-(9, 'LnJeKm5Bju', 'jBKUNpoksI', 'aEMtpZBsfX', '2020-06-10', '2020-06-10', 1, 0, 0, 'zKkVYEVCGJ', 'http://localhost:8000/default_poster.jpg', '2020-06-10 14:33:45', '2020-06-10 14:33:45'),
-(10, 'Titanic', 'Titanic', 'A movie about a ship and two lovers', '2020-06-10', '2020-06-10', 5, 1000, 12, 'USA', 'http://127.0.0.1:8000/uploads/1591823568.jpg', '2020-06-10 15:12:48', '2020-06-10 15:12:48');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `movie_genres`
---
-
-CREATE TABLE `movie_genres` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `movie_id` bigint(20) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `movie_genres`
---
-
-INSERT INTO `movie_genres` (`id`, `name`, `movie_id`) VALUES
-(1, 'Horror', 1),
-(2, 'Horror', 2),
-(3, 'Animation', 3),
-(4, 'Animation', 4),
-(5, 'Horror', 5),
-(6, 'Animation', 6),
-(7, 'Animation', 7),
-(8, 'Action', 8),
-(9, 'Animation', 9),
-(10, 'Action', 10);
+(45, 'asdasd', 'test1', 'asdasd', '2020-09-01', '2020-09-01', 1, 1, 1, 'asdasd', 'http://localhost:8000/default_poster.jpg', '2020-09-01 07:32:31', '2020-09-01 07:32:31'),
+(46, 'asdasd', 'test2', 'asdasd', '2020-09-01', '2020-09-01', 1, 1, 1, 'asdasd', 'http://localhost:8000/default_poster.jpg', '2020-09-01 07:47:41', '2020-09-01 07:47:41'),
+(47, 'asdasd', 'test3', 'asdasd', '2020-09-01', '2020-09-01', 1, 1, 1, 'asdasd', 'http://127.0.0.1:8000/uploads/1598968087.jpg', '2020-09-01 07:48:08', '2020-09-01 07:48:08'),
+(48, 'KKESHj8Sxq', 'vY2CNtPmUi', 'YyK6Ej6lwK', '2020-09-03', '2020-09-03', 1, 0, 0, 'PgOpncNyCa', 'http://localhost:8000/default_poster.jpg', '2020-09-03 16:59:40', '2020-09-03 16:59:40'),
+(49, 'Xgzqu4RZD9', 'qvi70NwuiY', 'CuGkujHr6f', '2020-09-03', '2020-09-03', 1, 0, 0, 'D901TENbQf', 'http://localhost:8000/default_poster.jpg', '2020-09-03 16:59:41', '2020-09-03 16:59:41'),
+(50, 'rhNG0DzlSd', 'P2uuCOvi8F', '3cX0dKzf0k', '2020-09-03', '2020-09-03', 1, 0, 0, 'Erv5PfEgBM', 'http://localhost:8000/default_poster.jpg', '2020-09-03 16:59:41', '2020-09-03 16:59:41');
 
 -- --------------------------------------------------------
 
@@ -262,7 +277,19 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (7, 'xC16wmPRJd', 'F3TvBtSwum@gmail.com', NULL, '$2y$10$NtCxRGleEk1anx.cAMZbCO/TrfzE0Qropg2jsQgsOYVqFRukYIdhC', NULL, NULL, NULL),
 (8, 'ovG9UrTEED', 'yHkEs4tcSq@gmail.com', NULL, '$2y$10$bfo3qSBsX9bIKfQWU/eHQO3vUiqBD71iSHisaNG5wqojafwMsT1tS', NULL, NULL, NULL),
 (9, 'GZ9Sy6iobr', 'eETYKrT9Ut@gmail.com', NULL, '$2y$10$WS2R5GIjGvxutbzLUBZ48OvkalToJYUfb0NunLsdt8V2UfYNN/5ja', NULL, NULL, NULL),
-(10, 'BKB6P9HeRo', 'hwMh4KAK3d@gmail.com', NULL, '$2y$10$NM1cBnTpKMvYFXasuXXZSOj3J/3uxbJbBTzYRV0Xic8OoxfwReQTa', NULL, NULL, NULL);
+(10, 'BKB6P9HeRo', 'hwMh4KAK3d@gmail.com', NULL, '$2y$10$NM1cBnTpKMvYFXasuXXZSOj3J/3uxbJbBTzYRV0Xic8OoxfwReQTa', NULL, NULL, NULL),
+(17, 'mimo', 'mimo@gmail.com', NULL, '$2y$10$WuaiK3oo2kSeGP8bfG4VmOD06A4xC1oVXB1/BWePcOw5ue1P3SvJa', NULL, '2020-08-30 06:47:55', '2020-08-30 06:47:55'),
+(18, 'sakib', 'sakib@gmail.com', NULL, '$2y$10$9wEYE4mvUq1ptcgyWIH4n.BdbnavGMATJ93iiiy8sr0N4CTWcERy.', NULL, '2020-08-30 06:52:24', '2020-08-30 06:52:24'),
+(19, 'd7JMijWvnZ', 'QfDkVaT9ad@gmail.com', NULL, '$2y$10$E2L9NqCO4xE6SgJ174CSo.GGruk4RfFyYg/83tGnvUl0IyYCzvHCK', NULL, NULL, NULL),
+(20, 'McQZ6eUxdy', 'K9oc09UaoY@gmail.com', NULL, '$2y$10$bPkwHUwJmIWr5U9ChiOMauMwhxVjryuDLjnA/hdnsH7uF/7FLowJe', NULL, NULL, NULL),
+(21, 'cEyozDLQG7', 'JbWBJs5UAz@gmail.com', NULL, '$2y$10$gvY3GpOnjYR26njzFMtFw.xuW4N3uZE4AnVfooPDCVUWBDT1d41NK', NULL, NULL, NULL),
+(22, 'RUtPn0i8YB', '2A2uokZYOQ@gmail.com', NULL, '$2y$10$AGtwkJx0I75BOR.SmINtXOto.OdareWrK5ygPkrbF35aiWOo9g6Wm', NULL, NULL, NULL),
+(23, 'omDrT9jSdj', 'vVPcK3T05o@gmail.com', NULL, '$2y$10$UllCbJFecSn3FOa1mQS/cOmnqwJEf3E1Hr.FPw7zEB4Iy2gdxqD3a', NULL, NULL, NULL),
+(24, 'hSuJB6XkZr', 'fL7AAMwPUk@gmail.com', NULL, '$2y$10$/CAB.ay3cJz.yhTAv8Fd0eCT2VbAmRzkWNuh.fR.QeEvGadpKibj2', NULL, NULL, NULL),
+(25, 'yFwLDPgH5p', 'ERTqYOIP8M@gmail.com', NULL, '$2y$10$InZK8fKDWLQchNJdk5rar.DqLKGpMkScM2d6YP002dnimNCMOPpQO', NULL, NULL, NULL),
+(26, 's6A62dA4zs', 'MeM5WSDn6k@gmail.com', NULL, '$2y$10$.Pkzf6x5tL/CwCBMAbl55ulG8wYVxVa9w4trxjM7gyHLGId0hl46O', NULL, NULL, NULL),
+(27, 'h7vk6jfH7q', '0qEtGD6WnM@gmail.com', NULL, '$2y$10$nWTGzIkU8yrUrtcTx0LpjumiYai5PlEHbr7CPlVYZ59Kcm5ID.8hq', NULL, NULL, NULL),
+(28, 'xWhIERnkf4', 'u8CBukJebQ@gmail.com', NULL, '$2y$10$8//YPN7IXHWlpgW.ZNiXoeSFnJhJFoySLAUy673hVmOmgDyWmeqD6', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -277,10 +304,23 @@ ALTER TABLE `comments`
   ADD KEY `comments_user_id_foreign` (`user_id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indexes for table `genres`
 --
-ALTER TABLE `failed_jobs`
+ALTER TABLE `genres`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `genre_movie`
+--
+ALTER TABLE `genre_movie`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `images_image_type_image_id_index` (`imageable_type`,`imageable_id`);
 
 --
 -- Indexes for table `migrations`
@@ -294,13 +334,6 @@ ALTER TABLE `migrations`
 ALTER TABLE `movies`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `movies_slug_name_unique` (`slug_name`) USING HASH;
-
---
--- Indexes for table `movie_genres`
---
-ALTER TABLE `movie_genres`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `movie_genres_movie_id_foreign` (`movie_id`);
 
 --
 -- Indexes for table `users`
@@ -317,37 +350,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT for table `genres`
 --
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `genres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `genre_movie`
+--
+ALTER TABLE `genre_movie`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `movie_genres`
---
-ALTER TABLE `movie_genres`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
@@ -359,12 +398,6 @@ ALTER TABLE `users`
 ALTER TABLE `comments`
   ADD CONSTRAINT `comments_movie_id_foreign` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`),
   ADD CONSTRAINT `comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `movie_genres`
---
-ALTER TABLE `movie_genres`
-  ADD CONSTRAINT `movie_genres_movie_id_foreign` FOREIGN KEY (`movie_id`) REFERENCES `movies` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
