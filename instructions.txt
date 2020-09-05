@@ -6,4 +6,3 @@ use these commands:
 or just load the movie-server.sql file
 
 Plese enjoy and give me feedback, your wise advice will aid me to develop my skills
-
